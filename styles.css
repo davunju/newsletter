@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    color: hsl(234, 29%, 20%);
+    background-color: hsl(235, 18%, 26%);
+}
+#wrapper{
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 7px;
+}
+#right img{
+    width: 300px;
+}
+#left{
+    display: block;
+    width: 350px;
+    padding: 20px;
+}
+#left .title{
+    font-size: 32px;
+    margin-bottom: 2vh;
+}
+#left p{
+    font-size: 15px;
+    margin-bottom: 2vh;
+    line-height: 1.5em;
+}
+#left .lists{
+    list-style: none;
+    padding-bottom: 5px;
+    margin-bottom: 1vh;
+}
+.lists li{
+    display: flex;
+    font-size: 14px;
+    gap: 3px;
+    padding-bottom: 5px;
+}
+li svg{
+    padding-bottom: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 4px;
+}
+#subscription_form{
+    display: block;
+    padding: 5px;
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-top: 0;
+}
+label small{
+    color: hsl(4, 100%, 67%);
+    font-size: small;
+    margin-top: 3px;
+}
+input{
+    display: block;
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(184, 181, 181);
+}
+input:focus{
+    outline: none;
+    border: 1px solid #000;
+}
+.field.error input{
+    background-color: hsla(4, 100%, 67%, 0.2);
+    border: 1px solid hsla(4, 100%, 67%, 0.4);
+}
+.field.success input{
+    background-color: rgba(62, 148, 62, 0.2);
+    border: 1px solid rgb(62, 148, 62, 0.4);
+}
+#submit-btn{
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(184, 181, 181);
+    background-color: hsl(234, 18%, 26%);
+    color: hsl(0, 15%, 92%);
+}
+#submit-btn:hover{
+    cursor: pointer;
+    background-color: hsl(4, 100%, 67%);
+}
+.modal{
+    background-color: #fff;
+    display: block;
+    padding: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 2;
+    width: 350px;
+}
+.modal img{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.modal h1{
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+.modal #dismiss_btn{
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: hsl(234, 18%, 26%);
+    color: hsl(0, 15%, 92%);
+}
+#dismiss_btn:hover{
+    cursor: pointer;
+    background-color: hsl(4, 100%, 67%);
+}
+.modal p{
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+p .confirm_email{
+    font-weight: bold;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(234, 29%, 20%);
+    z-index: 1;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    #wrapper{
+        padding: 8px;
+    }
+    #right img{
+        width: 300px;
+    }
+    #left{
+        width: 300px;
+    }
+    label small{
+        display: none;
+    }
+    .field.error input{
+        background-color: rgb(238, 231, 231);
+        border: 1px solid red;
+    }
+    .field.success input{
+        background-color: rgb(234, 241, 234);
+        border: 1px solid green;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    #wrapper{
+        padding: 7px;
+    }
+    #right img{
+        width: 250px;
+    }
+    #left{
+        width: 250px;
+    }
+    #left .title{
+        font-size: large;
+        margin-bottom: 5px;
+    }
+    #left p{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    #left .lists{
+        padding-bottom: 3px;
+        margin-bottom: 5px;
+    }
+    .lists li{
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    li svg{
+        padding-bottom: 8px;
+        margin-top: 1px;
+        margin-bottom: 0;
+    }
+    #subscription_form{
+        padding: 2px;
+    }
+    label{
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    label small{
+        display: none;
+    }
+    input{
+        margin-bottom: 8px;
+        padding: 7px;
+        border-radius: 3px;
+    }
+    #submit-btn{
+        padding: 7px;
+        border-radius: 3px;
+    }
+    .field.error input{
+        background-color: rgb(238, 231, 231);
+        border: 1px solid red;
+    }
+    .field.success input{
+        background-color: rgb(234, 241, 234);
+        border: 1px solid green;
+    }
+}
+
+@media screen and (max-width: 377px) {
+    #wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+    }
+    #right img{
+       width: 100%;
+    }
+    #left{
+        display: block;
+        width: 100%;
+        padding: 20px 20px;
+    }
+    #left .title{
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    #left p{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    #left .lists{
+        list-style: none;
+        padding-bottom: 10px;
+    }
+    .lists li{
+        display: flex;
+        font-size: 16px;
+        gap: 5px;
+    }
+    li svg{
+        width: 25px;
+        height: 25px;
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 2px;
+    }
+    #subscription_form{
+        display: block;
+        padding: 10px;
+    }
+    label{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: -17px;
+    }
+    input{
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 13px;
+        border-radius: 5px;
+        border: 1px solid rgb(184, 181, 181);
+    }
+    #submit-btn{
+        display: block;
+        width: 100%;
+        padding: 13px;
+        border-radius: 5px;
+        border: 1px solid rgb(184, 181, 181);
+        background-color: hsl(234, 18%, 26%);
+        color: hsl(0, 15%, 92%);
+    }
+    .modal{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .modal img{
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .modal h1{
+        margin-bottom: 15px;
+    }
+    .modal p{
+        margin-bottom: 28vh;
+    }
+}
